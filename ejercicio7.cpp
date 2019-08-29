@@ -1,29 +1,11 @@
-/*
- El usuario puede escoger de 5 opciones (de 1 a 5). Entonces pregunta por dos
- valores enteros para el calculo
-
- MENU:
- 1.- suma
- 2.- resta
- 3.- multiplicar
- 4.- dividir
- 5.- modulo
-
- Ingresa una opcion: 1
- Ingresa los dos numeros: 5 96
- Resultado: 111
-
- Continuar? y
-
- // Si el usuario ingresa 'y' a la pregunta Continuar? el usuario puede escoger otra opcion.
-
- */
-
 #include <iostream>
 #include <stdexcept> //Validar en la division por 0
+#include <string>
 using std::cout;
 using std::cin;
 using std::invalid_argument;
+using std::string;
+
 
 void mostrarMenu();
 int sumar(int a, int b);
@@ -42,8 +24,45 @@ void mostrarMenu() {
     cout<<"  3.- Multiplicar\n";
     cout<<"  4.- Dividir\n";
     cout<<"  6.- Modulo\n";
+    
+  
+  
 }
 
-int main() {
+int main() {int opcion,valor1,valor2;
+  mostrarMenu();
+  cout<<"Ingrese opcion:";
+  cin>>opcion;
+  cout<<"Ingresa los dos numeros separados por espacio: \n";
+  cin>>valor1>>valor2;
+  
+  switch(opcion){
+    case 1:
+     opcion= valor1 + valor2;
+     cout<<opcion;
+     break;
+    case 2:
+      opcion=valor1-valor2;
+      cout<<opcion;
+      break;
+    case 3:
+      opcion= valor1*valor2;
+      cout<<opcion;
+      break;
+    case 4:
+       opcion=valor1/valor2;
+       cout<<opcion;
+       break;
+    case 5:
+        opcion=valor1%valor2;
+        cout<<opcion;
+        break;
+    default:
+      cout<<"NO ESTA EN EL RANGO DE OPCIONES";
+  }
+
+ 
+   
     return 0;
 }
+
