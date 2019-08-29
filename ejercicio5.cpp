@@ -14,6 +14,7 @@ int main() {
       x1=-c/b;
       cout<<"La ecuacion tiene una solucion y esta es"<<x1;}
       }
+    else{
     delta=pow(b,2)-4*a*c;
     if(delta<0)
       cout<<"La ecuación no tiene solucion real";
@@ -24,7 +25,7 @@ int main() {
         cout<<"La ecuacion es un trinomio cuadrado perfecto y la solucion es "<<x1;
       else{
         cout<<"La ecuacion tiene dos soluciones y estas son"<<x1<<" y "<<x2;
-
+      }
       }
       }
       
